@@ -1,5 +1,72 @@
-% Paso 3 (Anderson). Sección 2.2. Falta el título exacto de la guía.
-% Cada concepto: (i) definición formal con cita, (ii) explicación propia de mínimo 3 oraciones,
-% (iii) ejemplo concreto del gimnasio de la UTEQ.
+\subsection{Proceso de ingeniería de requisitos}
 
-\subsection{}
+\subsubsection{Actividades centrales del marco de Pohl}
+
+Pohl distingue tres actividades centrales: la elicitación, que permite
+obtener información de las fuentes, la documentación, que registra
+los requisitos y sus decisiones, y la negociación, que busca resolver
+diferencias entre los interesados~\cite{pohl2025}.
+
+Durante la elicitación, el equipo puede consultar a quienes realizan
+una tarea y revisar los documentos que usan. La documentación
+permite conservar qué necesidad se identificó y de dónde proviene.
+Si dos actores esperan resultados distintos, la negociación ayuda
+a decidir qué se incorpora al alcance y a registrar el motivo de
+esa decisión~\cite{pohl2025,swebok2024}.
+
+\textbf{Ejemplo en UteqFit-AI.}
+Para revisar RI-01, el equipo puede solicitar a Bienestar
+Universitario una descripción del listado de estudiantes habilitados
+y consultar al encargado sobre su uso. Después puede documentar
+cuándo se entrega el listado y qué información necesita la
+importación. Si se pide una actualización distinta a la prevista
+por período académico, el equipo tendría que acordar quién la
+autoriza y cómo se entrega.
+
+\subsubsection{Actividades transversales}
+
+En el marco de Pohl, la validación comprueba si los requisitos
+representan las necesidades de los interesados. La gestión de
+requisitos mantiene su identificación, sus relaciones y su historial
+de cambios durante el proyecto~\cite{pohl2025,ieee29148}.
+
+La validación permite revisar un borrador con quienes conocen la
+operación del gimnasio. Si esa revisión revela un caso omitido,
+el equipo puede actualizar el requisito y su criterio de aceptación.
+La gestión ayuda a conservar la relación entre el cambio, la fuente
+que lo motivó y los requisitos que dependen de él~\cite{pohl2025,swebok2024}.
+
+\textbf{Ejemplo en UteqFit-AI.}
+Para revisar la importación del listado, se pueden preparar dos
+casos con datos ficticios: un estudiante que figura como habilitado
+y otro que no aparece en el archivo. Bienestar Universitario y el
+encargado de turno pueden revisar el resultado esperado para cada
+caso. Si acuerdan un tratamiento especial para las discrepancias,
+el equipo puede registrar la decisión en RI-01 y revisar su
+compatibilidad con RR-01.
+
+\subsubsection{Secuencia de trabajo aplicada al PFC}
+
+SWEBOK organiza el trabajo con requisitos en actividades que incluyen
+elicitación, análisis, especificación y validación. Estas actividades
+pueden repetirse cuando aparece información que obliga a modificar
+un requisito~\cite{swebok2024,ieee29148}.
+
+La elicitación permite identificar qué necesita cada actor y qué
+información puede aportar. En el análisis, el equipo contrasta esa
+información con el alcance del sistema y revisa posibles
+contradicciones. En la especificación, convierte las decisiones
+en enunciados identificables y verificables. En la validación,
+los interesados revisan si los enunciados y los casos de aceptación
+reflejan la operación esperada~\cite{swebok2024,ieee29148}.
+
+\textbf{Ejemplo en UteqFit-AI.}
+Para el control de ocupación, la secuencia propuesta comienza
+con una consulta al encargado sobre el registro de entradas y
+salidas. Sigue con el análisis de qué cuenta como visita abierta
+y con la especificación de RF-01, RF-02 y RF-06. La revisión
+con el responsable del gimnasio puede utilizar casos de entrada,
+salida y visita sin cerrar. Como evidencia de aplicación, el
+equipo puede adjuntar la nota de la consulta, la versión de los
+requisitos revisada y el registro de los resultados cuando se
+realice la validación.
