@@ -23,7 +23,7 @@ RS-01 & Stakeholder & El encargado de turno necesita buscar a un estudiante por 
 RNF-01 & Rendimiento (ISO/IEC 25010: eficiencia de desempeño) & El sistema deberá mostrar el resultado de la búsqueda de un estudiante por cédula en un máximo de 3 segundos. & Must & Supuesto del equipo \\ \hline
 RU-01 & Usuario & El estudiante necesita consultar la rutina que tiene asignada. & Could & Supuesto del equipo \\ \hline
 RU-02 & Usuario & El estudiante necesita consultar sus registros de entrada y salida del gimnasio. & Must & Supuesto del equipo \\ \hline
-RNF-02 & No funcional (ISO/IEC 25010: seguridad) & El sistema deberá permitir el acceso solo a usuarios que se autentiquen con usuario y contraseña. & Must & Supuesto del equipo \\ \hline
+RNF-02 & No funcional (ISO/IEC 25010: seguridad) & El sistema deberá bloquear una cuenta después de 5 intentos fallidos consecutivos de autenticación con usuario y contraseña. & Must & Supuesto del equipo \\ \hline
 RI-01 & Interfaz (software) & El sistema deberá permitir importar el listado de estudiantes habilitados que entregue Bienestar Universitario cada período académico. & Should & Supuesto del equipo \\ \hline
 RR-01 & Restricción & El sistema no deberá conectarse directamente con el sistema académico de la UTEQ; la habilitación de los estudiantes se validará con el listado de Bienestar Universitario. & Must & Supuesto del equipo \\ \hline
 RC-01 & Conformidad & El sistema deberá tratar los datos personales de los estudiantes conforme a la Ley Orgánica de Protección de Datos Personales del Ecuador (2021). & Must & LOPDP (2021)~\cite{lopdp2021} \\ \hline
