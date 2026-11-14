@@ -1,5 +1,33 @@
-% Paso 3 (Luis). Sección 2.4. Falta el título exacto de la guía.
-% Cada concepto: (i) definición formal con cita, (ii) explicación propia de mínimo 3 oraciones,
-% (iii) ejemplo concreto del gimnasio de la UTEQ.
+% Aporte de Luis: sección 2.4. Título de trabajo no confirmado por el docente.
+% Las propiedades se presentan conforme al enfoque de ISO/IEC/IEEE 29148:2018.
+\subsection{Propiedades de calidad de los requisitos}
+\label{sec:calidad-requisitos}
 
-\subsection{}
+Un requisito bien escrito no garantiza por sí solo que el proyecto resolverá el problema correcto. Es necesario examinar cada enunciado y, después, revisar el conjunto para detectar ausencias, contradicciones y duplicaciones~\cite{iso29148}. En UteqFit-AI, esta evaluación se aplicaría primero a la tabla preliminar de requisitos del equipo y posteriormente a las versiones acordadas con los actores del gimnasio.
+
+\subsubsection{Necesidad y pertinencia}
+Un requisito es necesario cuando responde a una necesidad comprobable o a una obligación que deba atender el sistema~\cite{iso29148}. Incluir funciones por simple interés tecnológico aumenta el trabajo sin demostrar su beneficio. Para decidir si se conserva una idea, el equipo debe preguntar quién la necesita y qué problema evita. Por ejemplo, recomendar rutinas mediante IA es una propuesta opcional del PFC; su prioridad depende de confirmar que existe una persona autorizada para revisarlas y que los estudiantes realmente las consideran útiles.
+
+\subsubsection{Claridad y ausencia de ambigüedad}
+Un requisito debe permitir una interpretación consistente entre quien lo solicita, quien lo desarrolla y quien lo verifica~\cite{iso29148}. Expresiones como ``fácil de usar'' o ``notificar pronto'' pueden producir resultados diferentes según la persona. Para mejorarlas hay que precisar actor, situación y resultado observable. En UteqFit-AI, ``mostrar las asistencias'' se aclara indicando si se muestran al estudiante, al encargado o a Bienestar Universitario y cuál es el intervalo de fechas consultado.
+
+\subsubsection{Completitud y singularidad}
+Un requisito completo incluye la información imprescindible para entender qué comportamiento se espera; además, conviene que exprese una sola obligación por enunciado~\cite{iso29148}. Si mezcla guardar asistencia, enviar alertas y elaborar reportes, una prueba podría aprobar una parte y fallar las otras. La separación también facilita estimar esfuerzos y localizar fallos. En UteqFit-AI sería preferible identificar por separado el registro de entrada, el registro de salida y el cálculo de ocupación actual.
+
+\subsubsection{Factibilidad}
+La factibilidad obliga a revisar si el requisito puede implementarse dentro de las restricciones de tiempo, recursos, tecnología y operación~\cite{iso29148}. Que una función sea atractiva no significa que existan los datos o permisos necesarios para ponerla en marcha. El análisis debe señalar dependencias y alternativas antes de comprometerse a desarrollarla. Para UteqFit-AI, las rutinas sugeridas mediante IA requieren evaluar disponibilidad de datos apropiados, revisión humana y límites de responsabilidad; todavía no corresponde declarar esa capacidad como validada.
+
+\subsubsection{Verificabilidad}
+Un requisito verificable permite decidir, mediante un procedimiento definido, si el producto lo cumple o no~\cite{iso29148}. Es útil establecer condiciones de prueba, datos de entrada y resultado esperado. Los calificativos subjetivos deben sustituirse por observaciones que puedan repetirse. Por ejemplo, para el registro de entrada se puede comprobar que una acción autorizada crea un registro con identificación del estudiante, fecha y hora; para rendimiento se requiere además acordar una carga de prueba y un tiempo máximo.
+
+\subsubsection{Corrección y consistencia}
+La corrección se relaciona con representar fielmente la necesidad acordada; la consistencia exige que los requisitos del conjunto no se contradigan~\cite{iso29148}. Dos enunciados pueden ser claros por separado y aun así establecer reglas incompatibles. Por eso se revisan juntos, idealmente con las partes interesadas autorizadas. En UteqFit-AI se debería comprobar que las reglas de acceso, consulta de historial y tratamiento de datos personales no permitan a un rol visualizar información que le está restringida en otro requisito.
+
+\subsubsection{Trazabilidad}
+La trazabilidad mantiene los vínculos entre origen, requisito, decisiones de diseño y evidencias de verificación~\cite{iso29148}. Es importante porque una modificación en las reglas de uso del gimnasio podría afectar varias funciones. Cada cambio debería permitir identificar qué se modifica, quién lo autorizó y qué pruebas deben repetirse. Como mecanismo propuesto, el equipo puede conservar una matriz con ID, fuente, versión, criterio de aceptación y prueba asociada para cada requisito de UteqFit-AI.
+
+\subsubsection{Conformidad de redacción}
+La especificación debe seguir las reglas de presentación acordadas, con identificadores estables y vocabulario uniforme~\cite{iso29148}. Esto evita que varios integrantes utilicen términos diferentes para la misma persona o función. También facilita revisar los requisitos y actualizar documentos sin perder referencias. En UteqFit-AI se propone mantener ``estudiante'', ``encargado de turno'' y ``responsable del gimnasio'' como roles distintos, mientras no se confirme que alguno comparte responsabilidades.
+
+\subsubsection{Calidad del conjunto de requisitos}
+Además de revisar cada enunciado, hay que comprobar que el conjunto sea suficientemente completo, consistente y adecuado para su propósito~\cite{iso29148}. La tabla podría tener quince requisitos bien redactados y aun así omitir cómo se corrige un registro de asistencia equivocado. También podría contener funciones que no tienen una fuente validada. La revisión colectiva debe señalar expresamente esos vacíos y distinguir los requisitos confirmados de las propuestas todavía pendientes.
