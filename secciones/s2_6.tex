@@ -1,5 +1,36 @@
-% Paso 3 (Luis). Sección 2.6. Falta el título exacto de la guía.
-% Cada concepto: (i) definición formal con cita, (ii) explicación propia de mínimo 3 oraciones,
-% (iii) ejemplo concreto del gimnasio de la UTEQ.
+% Aporte de Luis: sección 2.6. Título de trabajo, por confirmar en la guía completa.
+\subsection{Proceso y framework de Ingeniería de Requisitos}
+\label{sec:proceso-framework}
 
-\subsection{}
+La Ingeniería de Requisitos convierte necesidades y restricciones en especificaciones que se puedan analizar, acordar y verificar. ISO/IEC/IEEE 29148:2018 describe procesos e información asociados a requisitos; SWEBOK v4.0 cubre actividades de elicitación, análisis, especificación y validación~\cite{iso29148,swebok2024}. Pohl presenta un framework que relaciona el contexto, las actividades centrales, los artefactos y las actividades transversales~\cite{pohl2025}. El proceso no termina cuando se escribe la primera tabla: los requisitos se revisan cuando aparecen nuevos datos o cambian las condiciones del proyecto.
+
+\subsubsection{Elicitación de requisitos}
+La elicitación busca identificar necesidades mediante fuentes relevantes, por ejemplo entrevistas, observación y documentación existente~\cite{iso29148,swebok2024}. No debe confundirse con inventar funciones que parecen útiles sin consultarlas con nadie. Para cada fuente se registra qué información puede aportar y cómo se validará lo observado. En UteqFit-AI se proponen entrevistas al responsable del gimnasio y a Bienestar Universitario y observación autorizada del registro de asistencias; \textbf{son actividades planeadas, no entrevistas ni observaciones ya realizadas}.
+
+\subsubsection{Análisis y negociación}
+Durante el análisis se aclaran términos, dependencias, límites del sistema y posibles contradicciones entre necesidades~\cite{swebok2024,pohl2025}. La negociación permite resolver diferencias entre actores y acordar prioridades que el equipo pueda cumplir. Ninguna decisión sobre permisos institucionales se debe atribuir a la UTEQ sin respaldo. Un conflicto hipotético de UteqFit-AI sería la solicitud de reportes con datos identificables frente a la necesidad de restringir el acceso a datos personales; corresponde acordar con el responsable autorizado qué información puede consultarse.
+
+\subsubsection{Especificación y documentación}
+La especificación registra requisitos con estructura, identificación y condiciones de verificación~\cite{iso29148}. Debe mantener diferenciados los requisitos confirmados, las hipótesis y las restricciones externas. Esa distinción evita presentar el diseño preliminar como una decisión del cliente. En UteqFit-AI la tabla del equipo de quince requisitos es un artefacto inicial; para consolidarla se necesitará vincular cada ID con su fuente real, su prioridad y una prueba o criterio de aceptación.
+
+\subsubsection{Validación y gestión transversal}
+La validación comprueba que los requisitos representan el sistema que las partes interesadas necesitan; la gestión controla versiones, cambios y relaciones entre artefactos~\cite{iso29148,pohl2025}. Un documento puede ser claro y aun así especificar una función que el gimnasio no desea. Por ello deben realizarse revisiones con representantes autorizados y documentar las decisiones. Para UteqFit-AI se propone revisar un prototipo de registro de entrada y salida y mantener una matriz de trazabilidad; esas revisiones quedan pendientes hasta disponer de participantes y permisos.
+
+\subsubsection{Artefactos y relación con el contexto}
+El framework distingue metas, escenarios y requisitos orientados a la solución, que se elaboran dentro de un contexto de usuarios, procesos, reglas y tecnología~\cite{pohl2025}. Las metas explican el propósito del sistema; los escenarios describen situaciones de uso; y los requisitos precisan el comportamiento esperado. No deben tratarse como documentos aislados, pues las decisiones de uno influyen sobre los demás. En UteqFit-AI, una meta preliminar es controlar de manera confiable la asistencia; un escenario es el registro de entrada de un estudiante; y el requisito derivado describe la creación del registro correspondiente.
+
+\subsubsection{Aplicación propuesta al sistema del gimnasio}
+La siguiente secuencia organiza actividades y productos iniciales sin afirmar que ya se completaron acciones de campo~\cite{iso29148,pohl2025,swebok2024}.
+
+\begin{center}
+\small
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{2.45cm}|L|L|}
+\hline
+\rowcolor{verdeuteq}\textcolor{white}{\textbf{Actividad}} & \textcolor{white}{\textbf{Aplicación a UteqFit-AI}} & \textcolor{white}{\textbf{Artefacto o evidencia}} \\ \hline
+Identificar fuentes & Identificar responsables del gimnasio, estudiantes y Bienestar Universitario. & Lista inicial de stakeholders y preguntas por validar. \\ \hline
+Elicitar & Planificar revisión de registros actuales y consultas autorizadas con usuarios. & Guía de entrevista y observaciones reales, solo cuando se realicen. \\ \hline
+Analizar y negociar & Revisar reglas de acceso, prioridades y alcance de la función de IA. & Lista de conflictos y acuerdos pendientes. \\ \hline
+Especificar & Redactar requisitos identificados, con categoría, fuente y criterio de prueba. & Tabla preliminar de requisitos de la sección de artefactos. \\ \hline
+Validar y gestionar & Someter requisitos a revisión, registrar cambios y vincular pruebas. & Registro de revisión y matriz de trazabilidad cuando se disponga de validación. \\ \hline
+\end{tabularx}
+\end{center}
