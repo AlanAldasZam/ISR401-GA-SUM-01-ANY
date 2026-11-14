@@ -1,14 +1,141 @@
-% Paso 5 c) y d) (Luis).
-\subsection{Perspectivas de contexto}
-% Paso 5 c): las ocho perspectivas de contexto de Pohl aplicadas al PFC.
-% Para cada una: 3 preguntas clave y 2 requisitos o restricciones que salen de ella.
+% Luis: Paso 5c y 5d. Ocho perspectivas según Pohl (2025), cap. 15.
+% IMPORTANTE: las propuestas HIP son hipótesis, NO hallazgos de entrevistas.
+\subsection{Ocho perspectivas de contexto aplicadas a UteqFit-AI}
+\label{sec:ocho-perspectivas}
 
-\subsection{Mapa conceptual integrador}
-% Paso 5 d): mapa en draw.io con los cuatro temas de la unidad y mínimo 3 vínculos cruzados.
-% Exportarlo como PNG o PDF a la carpeta figuras/ y quitar el comentario de las líneas de abajo.
-% \begin{figure}[h]
-%   \centering
-%   \includegraphics[width=\textwidth]{figuras/mapa_conceptual.png}
-%   \caption{Mapa conceptual integrador de la unidad 1}
-%   \label{fig:mapa}
-% \end{figure}
+El análisis de contexto permite descubrir personas, reglas, procesos y tecnologías que pueden influir en los requisitos del sistema. Para esta práctica se utiliza la clasificación de ocho perspectivas presentada en la segunda edición de Pohl: uso, sujeto, sistema de TI, desarrollo, negocio, innovación, sociedad y técnica~\cite{pohl2025}. Esta aplicación se construye a partir de la descripción \emph{preliminar} de UteqFit-AI que elaboró el equipo. Las preguntas que siguen son propuestas para futuras consultas; los enunciados HIP son \textbf{candidatos a requisito o restricción pendientes de validación}, no exigencias ya aprobadas por el gimnasio ni resultados de trabajo de campo.
+
+\subsubsection{Perspectiva 1. Uso}
+Esta perspectiva examina las tareas que deben realizar las personas y las circunstancias en las que utilizarían el sistema~\cite{pohl2025}. En UteqFit-AI importa cómo se registra la asistencia durante los turnos y cómo un estudiante consulta sus registros. También deben considerarse las dificultades en horas de mayor concurrencia, sin afirmar que hayan sido observadas todavía.
+
+\textbf{Tres preguntas clave:}
+\begin{enumerate}
+\item ¿Cómo se registra actualmente la entrada y la salida de cada estudiante?
+\item ¿Qué hace el encargado si una persona olvida registrar la salida?
+\item ¿En qué situaciones un estudiante necesitaría consultar su historial de asistencias?
+\end{enumerate}
+\textbf{Dos candidatos de requisitos/restricciones:}
+\begin{itemize}
+\item \textbf{HIP-U-01 (funcional):} al registrar una entrada autorizada, el sistema deberá guardar el identificador del estudiante, la fecha y la hora.
+\item \textbf{HIP-U-02 (acceso):} cada estudiante deberá consultar únicamente su propio historial de asistencias, salvo permisos institucionales explícitos.
+\end{itemize}
+
+\subsubsection{Perspectiva 2. Sujeto o dominio}
+La perspectiva del sujeto considera los objetos, datos y reglas propios del dominio atendido por el sistema~\cite{pohl2025}. Para el gimnasio son relevantes los conceptos de estudiante habilitado, asistencia, cupo y rutina asignada. Sus definiciones deben acordarse porque una interpretación equivocada afectaría los registros y reportes.
+
+\textbf{Tres preguntas clave:}
+\begin{enumerate}
+\item ¿Qué información acredita que un estudiante está habilitado para utilizar el gimnasio?
+\item ¿Cómo se define un cupo disponible y quién establece la capacidad de cada turno?
+\item ¿Qué situaciones justifican corregir o anular una asistencia registrada?
+\end{enumerate}
+\textbf{Dos candidatos de requisitos/restricciones:}
+\begin{itemize}
+\item \textbf{HIP-S-01 (dato):} cada registro de asistencia deberá vincularse con un estudiante habilitado identificado de manera única.
+\item \textbf{HIP-S-02 (regla de negocio):} la capacidad máxima por turno deberá ser un dato configurable únicamente por el rol institucional autorizado, si la gestión de cupos forma parte del alcance aprobado.
+\end{itemize}
+
+\subsubsection{Perspectiva 3. Sistema de TI}
+Esta perspectiva identifica aplicaciones, bases de datos, interfaces y componentes informáticos que rodean la solución~\cite{pohl2025}. El equipo ha planteado recibir un listado de estudiantes habilitados sin integrar directamente el sistema académico. Es necesario confirmar si la fuente de datos y el método de intercambio son viables y cuentan con autorización.
+
+\textbf{Tres preguntas clave:}
+\begin{enumerate}
+\item ¿Qué entidad entregaría el listado de estudiantes habilitados y en qué formato?
+\item ¿Cada cuánto se actualizarían las altas y bajas de estudiantes habilitados?
+\item ¿El gimnasio dispone de cuentas institucionales o debería utilizarse una autenticación independiente?
+\end{enumerate}
+\textbf{Dos candidatos de requisitos/restricciones:}
+\begin{itemize}
+\item \textbf{HIP-TI-01 (interfaz):} el sistema deberá permitir importar una lista de estudiantes habilitados en un formato que se acuerde con la fuente institucional.
+\item \textbf{HIP-TI-02 (restricción):} no se habilitará una conexión directa a sistemas académicos de la UTEQ sin autorización formal y definición de interfaces.
+\end{itemize}
+
+\subsubsection{Perspectiva 4. Desarrollo}
+La perspectiva de desarrollo examina condiciones del proyecto, recursos, entregas y decisiones que limitan la construcción del producto~\cite{pohl2025}. UteqFit-AI es un proyecto académico, por lo que su alcance debe corresponder a capacidades demostrables y a tiempo disponible. También se necesita distinguir funciones imprescindibles de experimentos que podrían quedar fuera de la primera entrega.
+
+\textbf{Tres preguntas clave:}
+\begin{enumerate}
+\item ¿Qué funciones pueden desarrollarse, verificarse y documentarse dentro del calendario del PFC?
+\item ¿Quién revisará el cumplimiento de los requisitos y autorizará cambios de alcance?
+\item ¿Qué funciones deben mantenerse operativas si la recomendación mediante IA no está disponible?
+\end{enumerate}
+\textbf{Dos candidatos de requisitos/restricciones:}
+\begin{itemize}
+\item \textbf{HIP-D-01 (restricción de alcance):} el registro y la consulta de asistencias deberán poder utilizarse sin depender del módulo opcional de recomendación mediante IA.
+\item \textbf{HIP-D-02 (proceso):} todo cambio aprobado de alcance deberá registrarse con su responsable, fecha e impacto en los requisitos afectados.
+\end{itemize}
+
+\subsubsection{Perspectiva 5. Negocio}
+Esta perspectiva considera objetivos institucionales, responsabilidades, costos y beneficios esperados~\cite{pohl2025}. La descripción del equipo plantea que el servicio del gimnasio es gratuito y que Bienestar Universitario podría necesitar información de uso. Antes de convertir esas ideas en requisitos definitivos debe aclararse quién toma decisiones y qué indicadores realmente necesita.
+
+\textbf{Tres preguntas clave:}
+\begin{enumerate}
+\item ¿Qué problema operativo desea resolver primero el responsable del gimnasio?
+\item ¿Qué información resumida necesita Bienestar Universitario para evaluar la utilización del servicio?
+\item ¿Quién será responsable de mantener actualizada la información de estudiantes y turnos?
+\end{enumerate}
+\textbf{Dos candidatos de requisitos/restricciones:}
+\begin{itemize}
+\item \textbf{HIP-N-01 (funcional):} el sistema deberá generar un resumen de asistencias por período para el rol que autorice Bienestar Universitario.
+\item \textbf{HIP-N-02 (restricción de alcance):} el módulo inicial no contemplará cobros de membresías mientras el servicio se mantenga gratuito y no exista una autorización que modifique esa condición.
+\end{itemize}
+
+\subsubsection{Perspectiva 6. Innovación}
+La innovación examina posibilidades de mejora y el valor que podrían ofrecer tecnologías o enfoques nuevos~\cite{pohl2025}. En el PFC se plantea sugerir rutinas mediante inteligencia artificial, pero no se ha demostrado que esa función sea necesaria ni segura en las condiciones reales de operación. Por ello debe analizarse como una capacidad sujeta a validación y supervisión humana.
+
+\textbf{Tres preguntas clave:}
+\begin{enumerate}
+\item ¿Qué utilidad concreta tendría una sugerencia automática de rutina para los usuarios?
+\item ¿Existe un entrenador o responsable cualificado que pueda revisar las sugerencias?
+\item ¿Qué alternativa recibirá el estudiante si la sugerencia automática falla o es rechazada?
+\end{enumerate}
+\textbf{Dos candidatos de requisitos/restricciones:}
+\begin{itemize}
+\item \textbf{HIP-I-01 (funcional condicional):} si se incluye el módulo de IA, las rutinas sugeridas deberán permanecer en estado pendiente hasta la revisión de la persona autorizada.
+\item \textbf{HIP-I-02 (seguridad de uso):} el sistema no deberá presentar una recomendación automática como indicación médica ni asignarla sin revisión humana cuando esta función esté habilitada.
+\end{itemize}
+
+\subsubsection{Perspectiva 7. Sociedad}
+Esta perspectiva amplía la revisión hacia el impacto sobre personas, inclusión y expectativas sociales~\cite{pohl2025}. Un sistema universitario puede afectar a estudiantes con diferentes capacidades de acceso a la tecnología. Además, el historial de asistencia constituye información personal que requiere decisiones claras sobre su utilización y resguardo.
+
+\textbf{Tres preguntas clave:}
+\begin{enumerate}
+\item ¿Qué estudiantes podrían tener dificultades para utilizar la interfaz digital del sistema?
+\item ¿Quién puede consultar el historial de asistencias y para qué finalidades autorizadas?
+\item ¿Cómo se informará a los usuarios sobre el tratamiento de sus datos y sus derechos?
+\end{enumerate}
+\textbf{Dos candidatos de requisitos/restricciones:}
+\begin{itemize}
+\item \textbf{HIP-SO-01 (capacidad de interacción):} las operaciones esenciales deberán poder completarse con instrucciones claras y controles identificables, según criterios de accesibilidad que el equipo debe acordar y probar.
+\item \textbf{HIP-SO-02 (protección de datos):} el acceso a los registros personales de asistencia deberá restringirse por rol y finalidad autorizada, conforme a las obligaciones legales aplicables.
+\end{itemize}
+
+\subsubsection{Perspectiva 8. Técnica}
+La perspectiva técnica estudia límites de infraestructura, desempeño, conectividad, soporte y seguridad informática~\cite{pohl2025}. No se conocen todavía mediciones de red ni especificaciones de equipos disponibles en el gimnasio. Por esa razón, las metas de tiempo de respuesta deben definirse como propuestas de prueba y no como valores que la institución ya haya confirmado.
+
+\textbf{Tres preguntas clave:}
+\begin{enumerate}
+\item ¿Con qué computadoras, dispositivos y conectividad trabajaría el encargado del gimnasio?
+\item ¿Qué volumen de registros de asistencia se espera almacenar por período?
+\item ¿Qué debe ocurrir con un registro cuando la conexión falla durante el ingreso de datos?
+\end{enumerate}
+\textbf{Dos candidatos de requisitos/restricciones:}
+\begin{itemize}
+\item \textbf{HIP-TE-01 (rendimiento propuesto):} la búsqueda de un estudiante deberá responder en un máximo de tres segundos bajo una carga de prueba que el equipo definirá con los interesados.
+\item \textbf{HIP-TE-02 (integridad de datos):} el sistema deberá informar si una operación de registro no se guardó correctamente y evitar mostrarla como exitosa sin confirmación del almacenamiento.
+\end{itemize}
+
+\subsubsection{Síntesis y trazabilidad preliminar}
+Las preguntas y los candidatos anteriores permiten preparar entrevistas y pruebas, pero no sustituyen la validación por parte del gimnasio. Algunos candidatos se relacionan con los requisitos preliminares del equipo, por ejemplo HIP-U-01 con RF-01, HIP-U-02 con RU-02, HIP-TI-01 con RI-01 e HIP-TE-01 con RNF-01. Estas relaciones son propuestas de trazabilidad y deben revisarse para evitar requisitos duplicados o incompatibles. Las decisiones sobre capacidad, permisos, IA y conectividad permanecen abiertas hasta obtener evidencia autorizada.
+
+\subsection{Mapa conceptual integrador de la Unidad I}
+\label{sec:mapa-conceptual}
+
+La Figura~\ref{fig:mapa} relaciona cuatro temas utilizados para organizar esta práctica: fundamentos y tipos de requisitos; calidad de los requisitos; proceso y framework de IR; y contexto del sistema~\cite{iso29148,pohl2025,swebok2024}. Las conexiones cruzadas muestran que la clasificación facilita aplicar criterios de calidad, que el contexto alimenta la elicitación y que la validación comprueba la calidad de lo especificado. Los títulos agrupan contenidos de la unidad como apoyo visual; no pretenden reproducir un índice oficial de temas que no figura en la guía recibida.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{figuras/mapa_conceptual.png}
+  \caption{Mapa conceptual integrador de la Unidad I aplicado a UteqFit-AI. Elaboración del equipo (borrador editable en draw.io).}
+  \label{fig:mapa}
+\end{figure}
