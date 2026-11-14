@@ -1,2 +1,46 @@
-<?xml version='1.0' encoding='utf-8'?>
-<mxfile host="app.diagrams.net" modified="2026-11-14T00:00:00.000Z" agent="ChatGPT" version="24.7.17" type="device"><diagram id="uteqfit-u1" name="UteqFit-AI - Unidad I"><mxGraphModel dx="1800" dy="1100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1100" math="0" shadow="0"><root><mxCell id="0" /><mxCell id="1" parent="0" /><mxCell id="center" value="UTEQFIT-AI&lt;br/&gt;Gestión del gimnasio" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#18734C;strokeColor=#18734C;strokeWidth=3;fontSize=24;fontColor=#FFFFFF;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1"><mxGeometry x="745" y="485" width="310" height="100" as="geometry" /></mxCell><mxCell id="base" value="1. FUNDAMENTOS Y TIPOS&lt;br/&gt;&lt;br/&gt;Necesidades del gimnasio&lt;br/&gt;Negocio · usuario · stakeholder&lt;br/&gt;Funcionales · RNF · restricciones" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#A7C4AE;strokeWidth=3;fontSize=24;fontColor=#173025;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1"><mxGeometry x="100" y="205" width="630" height="245" as="geometry" /></mxCell><mxCell id="quality" value="2. CALIDAD DE REQUISITOS&lt;br/&gt;&lt;br/&gt;Necesidad y claridad&lt;br/&gt;Verificabilidad · trazabilidad&lt;br/&gt;Consistencia y corrección" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#A7C4AE;strokeWidth=3;fontSize=24;fontColor=#173025;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1"><mxGeometry x="1070" y="205" width="630" height="245" as="geometry" /></mxCell><mxCell id="process" value="3. PROCESO Y FRAMEWORK&lt;br/&gt;&lt;br/&gt;Elicitación · negociación&lt;br/&gt;Documentación · validación&lt;br/&gt;Metas · escenarios · requisitos" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#A7C4AE;strokeWidth=3;fontSize=24;fontColor=#173025;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1"><mxGeometry x="100" y="620" width="630" height="245" as="geometry" /></mxCell><mxCell id="context" value="4. CONTEXTO DEL SISTEMA&lt;br/&gt;&lt;br/&gt;Uso · sujeto · TI · desarrollo&lt;br/&gt;Negocio · innovación&lt;br/&gt;Sociedad · técnica" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#A7C4AE;strokeWidth=3;fontSize=24;fontColor=#173025;align=center;verticalAlign=middle;spacing=10;" vertex="1" parent="1"><mxGeometry x="1070" y="620" width="630" height="245" as="geometry" /></mxCell><mxCell id="center-base" value="" style="endArrow=block;html=1;rounded=1;strokeWidth=3;strokeColor=#719781;" edge="1" parent="1" source="center" target="base"><mxGeometry relative="1" as="geometry" /></mxCell><mxCell id="center-quality" value="" style="endArrow=block;html=1;rounded=1;strokeWidth=3;strokeColor=#719781;" edge="1" parent="1" source="center" target="quality"><mxGeometry relative="1" as="geometry" /></mxCell><mxCell id="center-process" value="" style="endArrow=block;html=1;rounded=1;strokeWidth=3;strokeColor=#719781;" edge="1" parent="1" source="center" target="process"><mxGeometry relative="1" as="geometry" /></mxCell><mxCell id="center-context" value="" style="endArrow=block;html=1;rounded=1;strokeWidth=3;strokeColor=#719781;" edge="1" parent="1" source="center" target="context"><mxGeometry relative="1" as="geometry" /></mxCell><mxCell id="cross-a" value="Clasificación → calidad" style="endArrow=block;html=1;rounded=1;strokeWidth=4;strokeColor=#C69543;dashed=1;fontSize=18;fontColor=#805821;labelBackgroundColor=#FFF6E8;" edge="1" parent="1" source="base" target="quality"><mxGeometry relative="1" as="geometry" /></mxCell><mxCell id="cross-b" value="Contexto → elicitación" style="endArrow=block;html=1;rounded=1;strokeWidth=4;strokeColor=#C69543;dashed=1;fontSize=18;fontColor=#805821;labelBackgroundColor=#FFF6E8;" edge="1" parent="1" source="context" target="process"><mxGeometry relative="1" as="geometry" /></mxCell><mxCell id="cross-c" value="Validación → revisión" style="endArrow=block;html=1;rounded=1;strokeWidth=4;strokeColor=#C69543;dashed=1;fontSize=18;fontColor=#805821;labelBackgroundColor=#FFF6E8;" edge="1" parent="1" source="process" target="base"><mxGeometry relative="1" as="geometry" /></mxCell></root></mxGraphModel></diagram></mxfile>
+<mxfile host="app.diagrams.net" agent="ChatGPT">
+  <diagram id="uteqfit-u1" name="UteqFit-AI - Unidad I">
+    <mxGraphModel dx="1644" dy="910" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="center" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#18734C;strokeColor=#18734C;strokeWidth=3;fontSize=24;fontColor=#FFFFFF;align=center;verticalAlign=middle;spacing=10;" value="UTEQFIT-AI&lt;br/&gt;Gestión del gimnasio" vertex="1">
+          <mxGeometry height="100" width="310" x="745" y="485" as="geometry" />
+        </mxCell>
+        <mxCell id="base" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#A7C4AE;strokeWidth=3;fontSize=24;fontColor=#173025;align=center;verticalAlign=middle;spacing=10;" value="1. FUNDAMENTOS Y TIPOS&lt;br/&gt;&lt;br/&gt;Necesidades del gimnasio&lt;br/&gt;Negocio · usuario · stakeholder&lt;br/&gt;Funcionales · RNF · restricciones" vertex="1">
+          <mxGeometry height="245" width="630" x="100" y="205" as="geometry" />
+        </mxCell>
+        <mxCell id="quality" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#A7C4AE;strokeWidth=3;fontSize=24;fontColor=#173025;align=center;verticalAlign=middle;spacing=10;" value="2. CALIDAD DE REQUISITOS&lt;br/&gt;&lt;br/&gt;Necesidad y claridad&lt;br/&gt;Verificabilidad · trazabilidad&lt;br/&gt;Consistencia y corrección" vertex="1">
+          <mxGeometry height="245" width="630" x="1070" y="205" as="geometry" />
+        </mxCell>
+        <mxCell id="process" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#A7C4AE;strokeWidth=3;fontSize=24;fontColor=#173025;align=center;verticalAlign=middle;spacing=10;" value="3. PROCESO Y FRAMEWORK&lt;br/&gt;&lt;br/&gt;Elicitación · negociación&lt;br/&gt;Documentación · validación&lt;br/&gt;Metas · escenarios · requisitos" vertex="1">
+          <mxGeometry height="245" width="630" x="100" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="context" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#A7C4AE;strokeWidth=3;fontSize=24;fontColor=#173025;align=center;verticalAlign=middle;spacing=10;" value="4. CONTEXTO DEL SISTEMA&lt;br/&gt;&lt;br/&gt;Uso · sujeto · TI · desarrollo&lt;br/&gt;Negocio · innovación&lt;br/&gt;Sociedad · técnica" vertex="1">
+          <mxGeometry height="245" width="630" x="1070" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="center-base" edge="1" parent="1" source="center" style="endArrow=block;html=1;rounded=1;strokeWidth=3;strokeColor=#719781;" target="base" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="center-quality" edge="1" parent="1" source="center" style="endArrow=block;html=1;rounded=1;strokeWidth=3;strokeColor=#719781;" target="quality" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="center-process" edge="1" parent="1" source="center" style="endArrow=block;html=1;rounded=1;strokeWidth=3;strokeColor=#719781;" target="process" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="center-context" edge="1" parent="1" source="center" style="endArrow=block;html=1;rounded=1;strokeWidth=3;strokeColor=#719781;" target="context" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cross-a" edge="1" parent="1" source="base" style="endArrow=block;html=1;rounded=1;strokeWidth=4;strokeColor=#C69543;dashed=1;fontSize=18;fontColor=#805821;labelBackgroundColor=#FFF6E8;" target="quality" value="Clasificación → calidad">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cross-b" edge="1" parent="1" source="context" style="endArrow=block;html=1;rounded=1;strokeWidth=4;strokeColor=#C69543;dashed=1;fontSize=18;fontColor=#805821;labelBackgroundColor=#FFF6E8;" target="process" value="Contexto → elicitación">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cross-c" edge="1" parent="1" source="process" style="endArrow=block;html=1;rounded=1;strokeWidth=4;strokeColor=#C69543;dashed=1;fontSize=18;fontColor=#805821;labelBackgroundColor=#FFF6E8;" target="base" value="Validación → revisión">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
