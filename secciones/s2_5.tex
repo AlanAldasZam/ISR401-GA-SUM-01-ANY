@@ -1,5 +1,20 @@
-% Paso 3 (Luis). Sección 2.5. Falta el título exacto de la guía.
-% Cada concepto: (i) definición formal con cita, (ii) explicación propia de mínimo 3 oraciones,
-% (iii) ejemplo concreto del gimnasio de la UTEQ.
-% Aquí van los tipos de sistema que usa la sección 0 (Paso 1 e).
-\subsection{}
+% Aporte de Luis: sección 2.5. Título de trabajo, por confirmar con el índice oficial.
+\subsection{Tipos de sistemas y ubicación de UteqFit-AI}
+\label{sec:tipos-sistemas}
+
+Determinar el tipo de sistema ayuda a reconocer sus fuentes de requisitos, riesgos y condiciones de uso. Una clasificación puede considerar la finalidad de la solución, sus componentes tecnológicos y la forma en que reacciona ante el entorno~\cite{pohl2025,swebok2024}. Los siguientes tipos son útiles para la práctica; no constituyen una taxonomía exclusiva o una enumeración normativa de ISO/IEC/IEEE 29148.
+
+\subsubsection{Sistema de información}
+Un sistema de información organiza datos y operaciones para apoyar actividades de una institución~\cite{swebok2024}. Sus requisitos suelen surgir de procesos de registro, consulta, control y elaboración de informes. Para entenderlo correctamente hay que analizar quién introduce los datos y quién puede consultarlos. UteqFit-AI encaja principalmente aquí porque se propone llevar registros de entrada y salida, consultar historial y ofrecer información de uso del gimnasio.
+
+\subsubsection{Sistema de software intensivo}
+En un sistema intensivo en software, gran parte del comportamiento observable depende de componentes y reglas programadas~\cite{pohl2025}. Su análisis incluye funciones, datos, interfaces y características de calidad, además de los actores que lo operan. Esto no obliga a usar un lenguaje o una arquitectura concretos antes de estudiar los requisitos. UteqFit-AI sería una solución de software intensivo si sus funciones de asistencia, consulta y eventual recomendación se implementan mediante una plataforma digital.
+
+\subsubsection{Sistema embebido o de control}
+Un sistema embebido ejecuta software dentro de un dispositivo dedicado e interactúa de forma estrecha con hardware o sensores~\cite{swebok2024}. En él pueden ser importantes los tiempos de respuesta frente a eventos físicos, el consumo de recursos y la seguridad de operación. No es correcto llamar embebido a cualquier sitio web que se use desde un teléfono. UteqFit-AI no se plantea inicialmente como sistema embebido: su función principal es gestionar información, aunque en el futuro podría tener interfaces con equipos de acceso si la institución las autorizara.
+
+\subsubsection{Sistema autoadaptativo}
+Un sistema autoadaptativo modifica determinadas decisiones o configuraciones en respuesta a condiciones que observa durante su operación~\cite{pohl2025}. Para identificarlo se debe especificar qué información monitorea, qué objetivo controla y cuáles son sus límites de actuación. Utilizar un algoritmo de IA no convierte automáticamente a todo el sistema en autoadaptativo. En el diseño preliminar de UteqFit-AI, la sugerencia de rutinas necesitaría revisión humana y no supone autonomía para asignar decisiones físicas o médicas a los estudiantes.
+
+\subsubsection{Clasificación del PFC y sus consecuencias}
+\textbf{Clasificación propuesta:} plataforma de información para el servicio universitario de gimnasio, implementada como sistema intensivo en software y con una función opcional de asistencia mediante IA~\cite{swebok2024,pohl2025}. Esta clasificación se desprende de la descripción preliminar documentada por el equipo; no implica que la UTEQ haya aprobado su alcance. Por ello las fuentes principales de requisitos serían los responsables del gimnasio, Bienestar Universitario, los estudiantes y la normativa aplicable. Se proponen como límites iniciales el registro de asistencias, las consultas autorizadas, la gestión de información y, sujeto a validación, las sugerencias de rutinas revisadas por un profesional. No se da por incluido el diagnóstico de salud, el cobro de membresías ni una conexión directa al sistema académico.
