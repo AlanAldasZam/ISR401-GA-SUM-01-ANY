@@ -1,5 +1,44 @@
-% Paso 3 (Anderson). Sección 2.1. Falta el título exacto de la guía.
-% Cada concepto: (i) definición formal con cita, (ii) explicación propia de mínimo 3 oraciones,
-% (iii) ejemplo concreto del gimnasio de la UTEQ.
+\subsection{Ingeniería de requisitos}
 
-\subsection{}
+\subsubsection{Definición y alcance}
+
+La ingeniería de requisitos reúne las actividades que permiten
+identificar, analizar, especificar, validar y gestionar las necesidades
+y restricciones de un sistema a lo largo de su ciclo de
+vida~\cite{ieee29148,pohl2025,swebok2024}.
+
+Una necesidad expresa el problema que un interesado quiere resolver.
+Para convertirla en un requisito, el equipo debe aclarar qué
+comportamiento espera del sistema y en qué condiciones debe ocurrir.
+Registrar la fuente de esa decisión permite revisarla cuando el equipo
+encuentra una excepción o cambia el alcance del
+proyecto~\cite{ieee29148,pohl2025}.
+
+\textbf{Ejemplo en UteqFit-AI.}
+La necesidad de conocer la ocupación del gimnasio se traduce en
+RF-06, que pide mostrar cuántos estudiantes tienen una entrada
+registrada sin su salida correspondiente. Para revisar ese requisito,
+se puede preparar un caso con tres entradas y dos salidas asociadas.
+El resultado esperado es que el sistema muestre una persona dentro.
+
+\subsubsection{Actores del proceso}
+
+En ingeniería de requisitos, los interesados son personas u
+organizaciones que tienen interés en el sistema o pueden verse
+afectadas por él. Sus necesidades y restricciones aportan información
+para definir lo que el sistema debe hacer~\cite{ieee29148,pohl2025}.
+
+El ingeniero de requisitos organiza las consultas y documenta las
+decisiones. El cliente o responsable del proyecto confirma las
+prioridades y los usuarios explican cómo realizan las operaciones
+cotidianas. El desarrollador aporta información sobre la viabilidad
+técnica y ayuda a aclarar las condiciones necesarias para implementar
+y comprobar los requisitos~\cite{pohl2025,swebok2024}.
+
+\textbf{Ejemplo en UteqFit-AI.}
+Para revisar RF-06, el equipo del PFC puede preparar los casos de
+prueba y consultar al encargado de turno sobre qué sucede cuando
+un estudiante se va sin registrar su salida. El responsable del
+gimnasio puede decidir cómo debe tratarse ese caso. El desarrollador
+puede valorar qué información haría falta para corregir el registro
+y conservar el historial de la operación.
