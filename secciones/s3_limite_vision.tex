@@ -1,20 +1,66 @@
-% Paso 5 a) y b) (Anderson).
 \subsection{Límite del sistema}
-% Paso 5 a): mínimo 5 entidades externas, con el tipo de datos, el protocolo y la frecuencia de cada interfaz.
 
-\begin{center}
+UteqFit-AI comprende el registro de entradas y salidas, la consulta
+del historial de visitas y el control de la ocupación del gimnasio.
+La habilitación se valida con el listado que entrega Bienestar
+Universitario cada período académico, mediante una importación de
+archivo. El sistema académico de la UTEQ queda fuera del alcance de
+la integración directa, según RI-01 y RR-01.
+
+La sugerencia de rutinas mediante inteligencia artificial se plantea
+como función opcional. Si se incorpora y el gimnasio cuenta con un
+entrenador, la rutina queda pendiente hasta que este la apruebe, según
+RF-04 y RF-05.
+
+La Tabla~\ref{tab:limite-uteqfit} presenta los intercambios previstos.
+Los canales de interacción son propuestas de diseño. El formato del
+listado institucional queda por confirmar con Bienestar Universitario.
+
+\begin{table}[htbp]
+\centering
 \small
+\caption{Entidades externas e interfaces de UteqFit-AI}
+\label{tab:limite-uteqfit}
 \begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{3.5cm}|L|>{\raggedright\arraybackslash}p{3cm}|>{\raggedright\arraybackslash}p{2.6cm}|}
 \hline
-\rowcolor{verdeuteq}\textcolor{white}{\textbf{Entidad externa}} & \textcolor{white}{\textbf{Tipo de datos}} & \textcolor{white}{\textbf{Protocolo}} & \textcolor{white}{\textbf{Frecuencia}} \\ \hline
- & & & \\ \hline
- & & & \\ \hline
- & & & \\ \hline
- & & & \\ \hline
- & & & \\ \hline
+\rowcolor{verdeuteq}
+\textcolor{white}{\textbf{Entidad externa}} &
+\textcolor{white}{\textbf{Tipo de datos}} &
+\textcolor{white}{\textbf{Protocolo o canal}} &
+\textcolor{white}{\textbf{Frecuencia}} \\ \hline
+Estudiante &
+Consulta sus registros de entrada y salida y, si se habilita la
+función, su rutina asignada. &
+Interfaz de usuario con autenticación. &
+Cada vez que realiza una consulta. \\ \hline
+Encargado de turno &
+Busca al estudiante por cédula y registra la entrada o salida. &
+Formulario de operación con autenticación. &
+Por cada entrada o salida. \\ \hline
+Responsable del gimnasio &
+Consulta el número de estudiantes con entrada registrada y sin salida.
+Recibe avisos de inasistencia. &
+Panel de gestión con acceso por rol. Canal de aviso por definir. &
+Ocupación a demanda. Aviso al cumplirse 14 días hábiles consecutivos
+sin una entrada registrada. \\ \hline
+Bienestar Universitario &
+Entrega el listado de estudiantes habilitados y consulta los
+registros de uso autorizados. &
+Importación de archivo y consulta con acceso restringido. &
+Listado por período académico. Consultas a demanda. \\ \hline
+Entrenador, si existe el rol &
+Revisa la rutina sugerida y registra su aprobación antes de asignarla. &
+Interfaz de revisión con acceso por rol. &
+Por cada rutina que requiera aprobación. \\ \hline
 \end{tabularx}
-\end{center}
+\end{table}
 
 \subsection{Declaración de visión}
-% Paso 5 b): formato Moore. "Para [usuario] que [necesidad], el [sistema] es [categoría] que [beneficio].
-% A diferencia de [alternativa], nuestro producto [diferenciador]."
+
+Para el personal del gimnasio de la UTEQ que necesita saber quién
+ingresó y cuántos estudiantes siguen dentro, UteqFit-AI es un sistema
+de gestión del gimnasio que registra entradas y salidas y permite
+consultar la ocupación. Frente a un registro manual, usado como
+alternativa de referencia mientras se confirma el procedimiento
+actual, UteqFit-AI calcula la ocupación a partir de las entradas
+que todavía no tienen una salida registrada.
